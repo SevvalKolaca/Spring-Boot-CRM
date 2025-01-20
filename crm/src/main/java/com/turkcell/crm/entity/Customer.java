@@ -35,9 +35,11 @@ public class Customer {
     private SegmentationType segmentationType;
 
     @OneToOne (mappedBy = "customer")
+    @JsonIgnore
     private IndividualCustomer individualCustomer;
 
     @OneToOne (mappedBy = "customer")
+    @JsonIgnore
     private CorporateCustomer corporateCustomer;
 
     @OneToMany(mappedBy = "customer")
